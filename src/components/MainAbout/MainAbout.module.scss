@@ -1,0 +1,100 @@
+.mainAbout {
+  display: flex;
+  padding: 50px 150px;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  .mainImg {
+    position: relative;
+  }
+  .vr {
+    position: absolute;
+    transform: translate(-6cm, 8cm);
+    .vrImg,
+    .playBtn {
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+    .div {
+      background: #21232e;
+      padding: 20px 35px;
+      overflow: hidden;
+      .vrImg {
+        transform: scale(1.1);
+      }
+    }
+    .playBtn {
+      position: absolute;
+      top: 40%;
+      right: 44%;
+    }
+    &:hover {
+      .vrImg {
+        transform: scale(1.2);
+      }
+      .playBtn {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .rightPart,
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  .rightPart {
+    gap: 25px;
+    align-items: start;
+    padding-right: 20px;
+    h2 {
+      background: linear-gradient(#e95ce9, #0cbaf1);
+      font-size: 16px;
+      font-weight: 500;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    h1 {
+      font-size: 48px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+    p {
+      font-size: 16px;
+      color: #d1d1d1;
+      font-weight: 300;
+      line-height: 35px;
+      padding-right: 40px;
+    }
+    .btnRead {
+      font-size: 14px;
+      color: white;
+      font-weight: 500;
+      letter-spacing: 1px;
+      padding: 15px 25px;
+      background: linear-gradient(45deg, #0cbaf1, #e95ce9);
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 1s;
+      &:hover {
+        box-shadow: 5px 2px 20px rgba(12, 186, 241, 0.2),
+          5px 2px 25px rgba(233, 92, 233, 0.3),
+          5px 5px 50px rgba(12, 186, 241, 0.4);
+      }
+    }
+    main {
+      gap: 20px;
+      .texts {
+        display: flex;
+        gap: 20px;
+        span {
+          color: white;
+          font-weight: 400;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

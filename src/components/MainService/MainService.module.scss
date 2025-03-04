@@ -1,0 +1,126 @@
+.mainService,
+.titles {
+  display: flex;
+  flex-direction: column;
+}
+.mainService {
+  padding: 120px 150px;
+  gap: 60px;
+  .upperPart {
+    display: flex;
+    justify-content: space-between;
+    .titles {
+      gap: 10px;
+      width: 45cm;
+      h2 {
+        background: linear-gradient(#e95ce9, #0cbaf1);
+        font-size: 16px;
+        font-weight: 500;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      h1 {
+        font-size: 48px;
+        font-weight: 600;
+        color: #ffffff;
+      }
+    }
+    p {
+      font-size: 16px;
+      line-height: 28px;
+      font-weight: 500;
+      color: #d1d1d1;
+    }
+  }
+  .bottomPart {
+    main {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      .eachCard {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+        position: relative;
+        padding: 30px 50px 60px 30px;
+        background: #252532;
+        &:nth-child(5),&:nth-child(2){
+          top: 50px;
+        }
+        &:nth-child(3),&:nth-child(6){
+          top: 100px;
+        }
+        h1 {
+          color: white;
+          font-weight: 400;
+          font-size: 20px;
+          padding-top: 20px;
+        }
+        p {
+          font-size: 14px;
+          color: #b0b0b2;
+          font-weight: 400;
+          line-height: 28px;
+        }
+        article {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 152px;
+          background: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            from(rgba(37, 37, 50, 0)),
+            color-stop(53.06%, rgba(37, 37, 50, 0.91)),
+            to(#252532)
+          );
+          background: -o-linear-gradient(
+            top,
+            rgba(37, 37, 50, 0) 0%,
+            rgba(37, 37, 50, 0.91) 53.06%,
+            #252532 100%
+          );
+          opacity: 0;
+          transition: 0.4s;
+
+          span {
+            border: 1px solid;
+            border-image: linear-gradient(45deg, #0cbaf1, #e95ce9) 1;
+            padding: 10px 15px;
+            background: transparent;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            position: absolute;
+            bottom: 25px;
+            right: 34%;
+            cursor: pointer;
+            &:hover {
+              background: linear-gradient(45deg, #0cbaf1, #e95ce9);
+            }
+          }
+        }
+        &:hover {
+          article {
+            background: linear-gradient(
+              180deg,
+              rgba(37, 37, 50, 0) 0%,
+              rgba(37, 37, 50, 0.91) 53.06%,
+              #252532 100%
+            );
+            opacity: 1;
+          }
+        }
+      }
+
+    }
+  }
+}
