@@ -48,10 +48,14 @@
         position: relative;
         padding: 30px 50px 60px 30px;
         background: #252532;
-        &:nth-child(5),&:nth-child(2){
+        border: 1px solid;
+        border-image: linear-gradient(to right, #636368, #21232e) 1;
+        &:nth-child(5),
+        &:nth-child(2) {
           top: 50px;
         }
-        &:nth-child(3),&:nth-child(6){
+        &:nth-child(3),
+        &:nth-child(6) {
           top: 100px;
         }
         h1 {
@@ -109,6 +113,8 @@
           }
         }
         &:hover {
+          border-image: linear-gradient(to right, #0cbaf1, #e95ce9) 1;
+
           article {
             background: linear-gradient(
               180deg,
@@ -120,7 +126,6 @@
           }
         }
       }
-
     }
   }
 }

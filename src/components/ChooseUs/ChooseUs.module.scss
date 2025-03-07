@@ -1,0 +1,122 @@
+.chooseUs {
+  display: flex;
+  padding: 100px 150px;
+  align-items: center;
+  gap: 10%;
+
+  .leftPart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    span {
+      background: linear-gradient(#e95ce9, #0cbaf1);
+      font-size: 16px;
+      font-weight: 500;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .heading {
+      font-weight: 600;
+      font-size: 48px;
+      color: white;
+      line-height: 50px;
+      padding-bottom: 30px;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+
+      .questions {
+        display: flex;
+        flex-direction: column;
+
+        .questionTitle {
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1px solid #FFFFFF59;
+          padding-bottom: 15px;
+
+          h1 {
+            font-size: 20px;
+            font-weight: 500;
+            color: #FFFFFF;
+          }
+
+          .rotate {
+            transform: rotate(180deg);
+            transition: 0.3s;
+          }
+        }
+
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          color: #D1D1D1;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, padding 0.5s ease-in-out;
+          opacity: 0;
+
+          &.open {
+            max-height: 400px; 
+            opacity: 1;
+          padding: 20px 10px 10px 10px;
+
+          }
+        }
+      }
+    }
+  }
+
+  .rightPart {
+    position: relative;
+
+
+    .placeVr {
+      position: absolute;
+      bottom: -5%;
+      right: 15%;
+
+      .vr {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        width: 190px;
+
+        &::before {
+          content: url(../../assets/Main/play.svg);
+          position: absolute;
+          top: 50px;
+          left: 80px;
+          z-index: 3;
+          transition: transform 0.3s ease-in-out;
+        }
+
+        .vrImg {
+          transition: transform 0.3s ease-in-out;
+          transform-origin: center;
+          overflow: hidden;
+        }
+
+        &:hover {
+          .vrImg {
+            transform: scale(1.1);
+          }
+
+          &::before {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}

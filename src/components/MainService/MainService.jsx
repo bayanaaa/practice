@@ -4,7 +4,7 @@ import { info } from "../../constants/MainService";
 
 function MainService() {
   const cards = info.map(({ img, desc, text }, index) => (
-    <div className={scss.eachCard}>
+    <div className={scss.eachCard} key={index}>
       <img src={img} alt="" />
       <h1>{desc}</h1>
       <p>{text}</p>
