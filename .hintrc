@@ -9,7 +9,9 @@
         "ignore": [
           "backdrop-filter",
           "animation-timeline",
-          "animation-timeline: view()"
+          "animation-timeline: view()",
+          "overflow: clip",
+          "overflow-clip-margin"
         ]
       }
     ]
