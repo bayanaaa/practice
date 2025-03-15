@@ -7,6 +7,7 @@ import ChooseUs from '../components/ChooseUs/ChooseUs'
 import Footer from '../components/Footer/Footer'
 import Start from '../components/Start/Start'
 import Pricing from '../components/Pricing/Pricing'
+import Articles from '../components/Articles/Articles'
 
 function HomePage() {
   return (
@@ -18,6 +19,7 @@ function HomePage() {
     <ChooseUs/>
     <Start/>
     <Pricing/>
+    <Articles/>
     <Footer/>
     </>
   )
