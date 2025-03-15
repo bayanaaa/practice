@@ -8,6 +8,7 @@ import Footer from '../components/Footer/Footer'
 import Start from '../components/Start/Start'
 import Pricing from '../components/Pricing/Pricing'
 import Articles from '../components/Articles/Articles'
+import Subscribe from '../components/Subscribe/Subscribe'
 
 function HomePage() {
   return (
@@ -20,6 +21,7 @@ function HomePage() {
     <Start/>
     <Pricing/>
     <Articles/>
+    <Subscribe/>
     <Footer/>
     </>
   )
