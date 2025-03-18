@@ -4,36 +4,52 @@
   gap: 50px;
   align-items: center;
   justify-content: center;
-  .mainImg {
+  .content{
     position: relative;
-  }
-  .vr {
-    position: absolute;
-    transform: translate(-6cm, 8cm);
-    .vrImg,
-    .playBtn {
-      cursor: pointer;
-      transition: transform 0.3s ease-in-out;
-    }
-    .div {
-      background: #21232e;
-      padding: 20px 35px;
-      overflow: hidden;
-      .vrImg {
-        transform: scale(1.1);
-      }
-    }
-    .playBtn {
+    width: fit-content;
+    .vr {
       position: absolute;
-      top: 40%;
-      right: 44%;
-    }
-    &:hover {
+      bottom: -20px;
+      right: 60px;
+      width: 50%;
+      height: 100px;
+      overflow: hidden;
+      width: fit-content;
       .vrImg {
-        transform: scale(1.2);
-      }
+        background: #21232e;
+        padding: 10px 15px;
+        overflow: hidden;
+        position: relative;
+        z-index: 0;
+        transition: transform 0.4s ease-in-out;
+    }
+    
+    .vrImg::before {
+        content: "";
+        background: url(../../assets/Main/play.svg) no-repeat center;
+        background-size: contain;
+        width: 50px;  
+        height: 50px; 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+    }
+    
       .playBtn {
-        transform: scale(1.2);
+        position: absolute;
+        top: 40%;
+        right: 44%;
+      }
+      &:hover {
+        overflow: hidden;
+        .vrImg {
+          transform: scale(1.1);
+        }
+        .playBtn {
+          transform: scale(1.2);
+        }
       }
     }
   }
@@ -94,6 +110,48 @@
           font-weight: 400;
           font-size: 16px;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mainAbout{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 30px;
+    .content{
+
+      .mainImg{
+        width: 100%;
+      }
+      .vr{
+        bottom: -10px;
+        right: 50px;
+        width: fit-content;
+        .vrImg{
+          padding: 10px 20px;
+          .vrImg{
+            transform: scale(1);
+
+          }
+        }
+        &:hover{
+          overflow: hidden;
+
+          .vrImg{
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    .rightPart{
+      h1{
+        font-size: 32px;
+      }
+      p{
+        font-size: 16px;
+        padding: 0;
       }
     }
   }

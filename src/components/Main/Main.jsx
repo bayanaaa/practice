@@ -31,16 +31,14 @@ function Main() {
             <button>discover more</button>
           </article>
           <div className={scss.clients}>
-            <img src={happyClients} alt="" />
-            <aside>
-              <div className={scss.div}>
-                <img src={video} className={scss.video} alt="video" />
-              </div>
-              <img src={play} className={scss.playBtn} alt="playBtn" />
-            </aside>
+            <img src={happyClients} alt="" className={scss.happyClients} />
+            <div className={scss.div}>
+              <img src={video} className={scss.video} alt="video" />
+            </div>
           </div>
         </div>
-        <p className={scss.gradient}><img src={vrImg} className={scss.vrImg} alt="VrImg" /></p>
+
+        <img src={vrImg} className={scss.vrImg} alt="VrImg" />
       </section>
       <section className={scss.bottomPart}>{cards}</section>
       <img src={mainBg} className={scss.mainBg} alt="mainBg" />

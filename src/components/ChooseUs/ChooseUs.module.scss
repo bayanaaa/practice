@@ -120,3 +120,35 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .chooseUs{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 50px 30px;
+    gap: 100px;
+    .rightPart{
+      img{
+        width: 100%;
+      }
+      .placeVr{
+        .vr{
+          width: 120px;
+          &::before{
+            top: 40%;
+            left: 40%;
+          }
+        }
+      }
+    }
+    .leftPart{
+      .heading{
+        font-size: 32px;
+        line-height: 100%;
+      }
+      span{
+        font-size: 16px;
+      }
+    }
+  }
+}

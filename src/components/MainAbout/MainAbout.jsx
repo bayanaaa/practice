@@ -15,13 +15,15 @@ function MainAbout() {
 
   return (
     <div className={scss.mainAbout}>
+      <div className={scss.content}>
       <img src={mainAboutImg} className={scss.mainImg} alt="" />
       <aside className={scss.vr}>
-        <div className={scss.div}>
+        {/* <div className={scss.div}> */}
           <img src={vr} className={scss.vrImg} alt="video" />
-        </div>
-        <img src={play} className={scss.playBtn} alt="playBtn" />
+        {/* </div> */}
+        {/* <img src={play} className={scss.playBtn} alt="playBtn" /> */}
       </aside>
+      </div>
       <article className={scss.rightPart}>
         <h2>About Us</h2>
         <h1>

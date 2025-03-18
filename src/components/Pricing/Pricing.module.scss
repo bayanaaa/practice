@@ -17,21 +17,24 @@
     font-weight: 600;
     font-size: 48px;
   }
-  p {
+  .text {
     color: #d1d1d1;
     font-weight: 300;
     font-size: 16px;
+    width: 50%;
   }
-  main, article,aside{
+  main,
+  article,
+  aside {
     display: flex;
     flex-direction: column;
   }
   main {
     gap: 25px;
-    background: #252532CF;
+    background: #252532cf;
     padding: 50px 50% 50px 30px;
-    border: .5px solid;
-    border-image: linear-gradient(to right, #6d6969, #FFFFFF00) 1;
+    border: 0.5px solid;
+    border-image: linear-gradient(to right, #6d6969, #ffffff00) 1;
 
     .infos {
       display: flex;
@@ -41,22 +44,22 @@
         border: 1px solid #e95ce9;
         padding: 5px;
         border-radius: 50%;
-
       }
       article {
         gap: 15px;
-        h1{
-            font-size: 18px;
-            font-weight: 400;
+        h1 {
+          font-size: 18px;
+          font-weight: 400;
         }
-        P{
-            font-size: 16px;
-            font-weight: 400;
+        P {
+          font-size: 16px;
+          font-weight: 400;
+          color: #d1d1d1;
         }
       }
     }
   }
-  aside{
+  aside {
     position: absolute;
     bottom: 0;
     right: 20%;
@@ -65,35 +68,57 @@
     padding: 20px;
     background: #252532;
     border: 1px solid;
-    border-image: linear-gradient(#E95CE9,#0CBAF1) 1;
-    .start{
-        color: #D1D1D1;
-        font-weight: 500; 
-        font-size: 14px;
+    border-image: linear-gradient(#e95ce9, #0cbaf1) 1;
+    .start {
+      color: #d1d1d1;
+      font-weight: 500;
+      font-size: 14px;
     }
-    h1{
-        font-size: 60px;
+    h1 {
+      font-size: 60px;
     }
-    button{
-        padding: 10px 25px;
-        text-transform: uppercase;
-        font-size: 14px;
-        font-weight: 600;
-        background: linear-gradient(45deg,#0cbaf1,#e95ce9);
-        color: white;
-        border: none;
-        letter-spacing: 1px;
-        margin: 15px 0;
-        cursor: pointer;
-        transition: .5s;
-        &:hover {
-          box-shadow: 5px 2px 20px rgba(12, 186, 241, 0.2),
-            5px 2px 25px rgba(233, 92, 233, 0.3),
-            5px 5px 50px rgba(12, 186, 241, 0.4);
-        }
+    button {
+      padding: 10px 25px;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 600;
+      background: linear-gradient(45deg, #0cbaf1, #e95ce9);
+      color: white;
+      border: none;
+      letter-spacing: 1px;
+      margin: 15px 0;
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover {
+        box-shadow: 5px 2px 20px rgba(12, 186, 241, 0.2),
+          5px 2px 25px rgba(233, 92, 233, 0.3),
+          5px 5px 50px rgba(12, 186, 241, 0.4);
+      }
     }
-    p{
-        font-size: 12px;
+    p {
+      font-size: 12px;
+      color: #d1d1d1;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing {
+    padding: 50px 30px;
+    span,
+    p {
+      font-size: 16px;
+    }
+    h1 {
+      font-size: 32px;
+    }
+    main {
+      padding: 40px 20px 250px 20px;
+    }
+    aside {
+      right: 15%;
+      width: 60%;
     }
   }
 }

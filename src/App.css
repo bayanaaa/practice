@@ -19,6 +19,15 @@ body {
 .bg2 {
   position: absolute;
   bottom: 0;
+  left: 0;
   height: 50vh;
   z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .bg2{
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+  }
 }

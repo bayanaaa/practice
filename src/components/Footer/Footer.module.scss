@@ -67,3 +67,27 @@ article {
     color: #b0b0b2;
   }
 }
+
+@media (max-width: 768px) {
+  .footer{
+    // overflow: hidden;
+    footer{
+      gap: 50px;
+      margin: 50px 30px;
+      display: flex;
+      flex-direction: column;
+      .firstLine{
+        display: flex;
+        gap: 50px;
+        .logo{
+          width: 40%;
+        }
+      }
+      .infosPart{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+    }
+  }
+}
