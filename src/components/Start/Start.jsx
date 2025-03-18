@@ -9,9 +9,7 @@ function Start() {
   return (
     <div className={scss.start}>
       <span>How to get started?</span>
-      <h1>
-        Bringing Your Virtual Reality <br /> Dreams to Life{" "}
-      </h1>
+      <h1>Bringing Your Virtual Reality Dreams to Life </h1>
 
       {click != true ? (
         <main onClick={() => setClick(true)}>

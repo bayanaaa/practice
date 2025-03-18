@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import scss from "./Header.module.scss";
 import logo from "../../assets/Header/logo.svg";
 import { pages } from "../../constants/Header";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Navs from "./Navs/Navs";
 
 function Header() {
@@ -10,9 +10,21 @@ function Header() {
   const [scrolled, setScrolled] = useState(false);
   const navRef = useRef(null);
 
+  const [burgerOpen, setBurgerOpen] = useState(false);
+
   const handleToggle = (index) => {
     setOpen(open === index ? null : index);
   };
+
+  useEffect(() => {
+    if (burgerOpen) {
+      document.body.style.height = "100vh";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.height = "auto";
+      document.body.style.overflow = "auto";
+    }
+  }, [burgerOpen]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,13 +51,12 @@ function Header() {
     };
   }, []);
 
-  
   return (
     <header className={`${scss.header} ${scrolled ? scss.scrolled : ""}`}>
       <Link to="/">
         <img src={logo} alt="Logo" />
       </Link>
-      <nav ref={navRef}>
+      <nav ref={navRef} className={scss.navs}>
         {pages.map((page, index) => (
           <Navs
             key={index}
@@ -58,7 +69,28 @@ function Header() {
           />
         ))}
       </nav>
-      <span>Contact Us</span>
+      <span className={scss.span}>Contact Us</span>
+      <p className={scss.burger} onClick={() => setBurgerOpen(!burgerOpen)}>
+        <span className={burgerOpen ? scss.opened : ""}></span>
+        <span className={burgerOpen ? scss.opened : ""}></span>
+        <span className={burgerOpen ? scss.opened : ""}></span>
+      </p>
+      {burgerOpen && (
+        <nav ref={navRef} className={burgerOpen ? scss.navsBurger : scss.navs}>
+          {pages.map((page, index) => (
+            <Navs
+              key={index}
+              title={page.title}
+              link={page.link}
+              arrow={page.arrow}
+              openLink={page.openLink}
+              isOpen={open === index}
+              onToggle={() => handleToggle(index)}
+              burgerOpen={burgerOpen}
+            />
+          ))}
+        </nav>
+      )}
     </header>
   );
 }

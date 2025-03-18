@@ -31,7 +31,7 @@ function Footer() {
     <div className={scss.footer}>
       <footer>
         <section className={scss.firstLine}>
-          <img src={logo} alt="" />
+          <img className={scss.logo} src={logo} alt="" />
           <div className={scss.socialPages}>{socials}</div>
         </section>
         <section className={scss.infosPart}>{infos}</section>

@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import scss from '../Header.module.scss';
 
-function Navs({ title, link, arrow, openLink, isOpen, onToggle }) {
+function Navs({ title, link, arrow, openLink, isOpen, onToggle, burgerOpen }) {
   return (
-    <div className={scss.navs}>
+    <div className={`${scss.navs} ${burgerOpen ? scss.burgerActive : ''}`}>
+      <div className={scss.withArrow}>
       <Link className={scss.pages} to={link}>
         {title}
       </Link>
@@ -12,7 +13,7 @@ function Navs({ title, link, arrow, openLink, isOpen, onToggle }) {
       {arrow && (
         <svg
           className={isOpen ? scss.arrowRotate : scss.arrow}
-          onClick={onToggle} // Передаем функцию без аргументов
+          onClick={onToggle}
           width="15"
           height="20"
           viewBox="0 0 12 12"
@@ -25,6 +26,7 @@ function Navs({ title, link, arrow, openLink, isOpen, onToggle }) {
           />
         </svg>
       )}
+      </div>
 
       {isOpen && openLink && (
         <div className={scss.arrowClick}>
@@ -38,5 +40,6 @@ function Navs({ title, link, arrow, openLink, isOpen, onToggle }) {
     </div>
   );
 }
+
 
 export default Navs;

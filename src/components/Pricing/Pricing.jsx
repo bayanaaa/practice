@@ -18,10 +18,10 @@ function Pricing() {
     <div className={scss.pricing}>
       <span>our pricing</span>
       <h1>Affordable VR Services for Everyone</h1>
-      <p>
+      <p className={scss.text}>
         At VRNas, we believe that everyone should have access to the benefits of
-        VR. That's <br />
-        why we offer a range of pricing options to meet the needs of any budget.
+        VR. That's why we offer a range of pricing options to meet the needs of
+        any budget.
       </p>
       <main>{pricings}</main>
       <aside>
