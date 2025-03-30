@@ -9,7 +9,8 @@ function ChooseUs() {
   const cards = info.map((el, index) => <Cards {...el} key={index} />);
 
   return (
-    <div className={scss.chooseUs}>
+    <div className="container">
+      <div className={scss.chooseUs}>
       <section className={scss.leftPart}>
         <span>why choose us</span>
         <h1 className={scss.heading}>
@@ -26,6 +27,7 @@ function ChooseUs() {
           </aside>
         </div>
       </section>
+    </div>
     </div>
   );
 }

@@ -13,7 +13,8 @@ function MainService() {
   ));
 
   return (
-    <div className={scss.mainService}>
+    <div className="container">
+      <div className={scss.mainService}>
       <section className={scss.upperPart}>
         <div className={scss.titles}>
           <h2>our service</h2>
@@ -30,6 +31,7 @@ function MainService() {
       <section className={scss.bottomPart}>
         <main>{cards}</main>
       </section>
+    </div>
     </div>
   );
 }

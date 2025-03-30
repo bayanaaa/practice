@@ -4,7 +4,8 @@
   flex-direction: column;
 }
 .mainService {
-  padding: 120px;
+  padding: 120px 0;
+  width: 100%;
   gap: 60px;
   .upperPart {
     display: flex;
@@ -133,7 +134,7 @@
 
 @media (max-width: 768px) {
   .mainService{
-    padding: 50px 30px;
+    padding: 50px 0;
     overflow: hidden;
     .upperPart{
       display: flex;

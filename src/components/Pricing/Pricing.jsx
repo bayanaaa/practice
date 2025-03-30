@@ -15,7 +15,8 @@ function Pricing() {
   ));
 
   return (
-    <div className={scss.pricing}>
+   <div className="container">
+     <div className={scss.pricing}>
       <span>our pricing</span>
       <h1>Affordable VR Services for Everyone</h1>
       <p className={scss.text}>
@@ -31,6 +32,7 @@ function Pricing() {
         <p>30 Days Moneyback Guarantee</p>
       </aside>
     </div>
+   </div>
   );
 }
 

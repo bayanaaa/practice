@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import ArticleSlider from "./ArticleSlider/ArticleSlider";
 import arrow from "../../assets/Article/arrow.svg";
 import { data } from "../../constants/Slider";
-import "overlayscrollbars/styles/overlayscrollbars.css";
 
 function Articles() {
   let recent = data.map(({ img, title, desc }, index) => (
@@ -23,7 +22,8 @@ function Articles() {
   ));
 
   return (
-    <div className={scss.article}>
+   <div className="container">
+     <div className={scss.article}>
       <span className={scss.heading}>OUR ARTICLES</span>
       <div className={scss.top}>
         <h1>Stay Up-to-Date with Our VR Insights</h1>
@@ -39,6 +39,7 @@ function Articles() {
         </div>
       </main>
     </div>
+   </div>
   );
 }
 

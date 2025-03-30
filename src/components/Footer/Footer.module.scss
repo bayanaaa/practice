@@ -14,11 +14,10 @@ article {
   position: relative;
 
   footer {
-    margin: 50px 120px 20px 120px;
+    width: 100%;
     gap: 170px;
-    width: 80%;
     padding-bottom: 50px;
-    border-bottom: 1px solid #E95CE9;
+    border-bottom: 1px solid #e95ce9;
     .firstLine {
       flex-direction: column;
       justify-content: space-between;
@@ -69,21 +68,20 @@ article {
 }
 
 @media (max-width: 768px) {
-  .footer{
-    // overflow: hidden;
-    footer{
+  .footer {
+    footer {
       gap: 50px;
-      margin: 50px 30px;
+      margin: 50px 0;
       display: flex;
       flex-direction: column;
-      .firstLine{
+      .firstLine {
         display: flex;
         gap: 50px;
-        .logo{
+        .logo {
           width: 40%;
         }
       }
-      .infosPart{
+      .infosPart {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 30px;
