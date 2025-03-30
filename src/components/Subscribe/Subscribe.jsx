@@ -5,7 +5,8 @@ import message from "../../assets/Subscribe/Message.svg";
 
 function Subscribe() {
   return (
-    <div className={scss.subscribe}>
+    <div className="container">
+      <div className={scss.subscribe}>
       <h1>Subscribe to our newsletter for latest updates</h1>
       <form>
         <img src={message} alt="" />
@@ -14,6 +15,7 @@ function Subscribe() {
           <img src={send} alt="" />
         </button>
       </form>
+    </div>
     </div>
   );
 }

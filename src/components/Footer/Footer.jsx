@@ -28,7 +28,8 @@ function Footer() {
   ));
 
   return (
-    <div className={scss.footer}>
+    <div className="container">
+      <div className={scss.footer}>
       <footer>
         <section className={scss.firstLine}>
           <img className={scss.logo} src={logo} alt="" />
@@ -39,6 +40,7 @@ function Footer() {
       <span className={scss.copyright}>
         © Copyright 2023, All Rights Reserved
       </span>
+    </div>
     </div>
   );
 }

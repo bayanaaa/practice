@@ -1,6 +1,7 @@
 .mainAbout {
   display: flex;
-  padding: 100px 120px;
+  width: 100%;
+  padding: 100px 0;
   gap: 50px;
   align-items: center;
   justify-content: center;
@@ -119,7 +120,7 @@
   .mainAbout{
     display: flex;
     flex-direction: column;
-    padding: 50px 30px;
+    padding: 50px 0;
     .content{
 
       .mainImg{

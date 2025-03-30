@@ -1,11 +1,15 @@
 .main {
-  padding: 20px 120px 0 120px;
+  width: 100%;
   position: relative;
-  .mainBg {
+  &::before{
+    content: "";
+    background: url(../../assets/Main/mainBg.svg);
     position: absolute;
+    width: 80%;
+    height: 70%;
+    left: -10%;
     bottom: 13%;
-    left: 0;
-    z-index: -1;
+    z-index: -2;
   }
   .upperPart {
     display: flex;
@@ -63,12 +67,6 @@
           .video {
             transform: scale(1.1);
             transition: transform 0.3s ease-in-out;
-            // position: relative;
-            //   &::before{
-            //     content: url(../../assets/Main/play.svg);
-            //     position: absolute;
-            //     z-index: 3;
-            //   }
           }
           &:hover {
             .video {
@@ -114,7 +112,7 @@
 
 @media (max-width: 768px) {
   .main {
-    padding: 30px;
+    padding: 30px 0;
     overflow: hidden;
 
     .mainBg {

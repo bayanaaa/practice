@@ -2,7 +2,6 @@ import React from "react";
 import scss from "./MainAbout.module.scss";
 import mainAboutImg from "../../assets/MainAbout/mainAboutImg.svg";
 import vr from "../../assets/MainAbout/vr.svg";
-import play from "../../assets/Main/play.svg";
 import { arr } from "../../constants/MainAbout";
 
 function MainAbout() {
@@ -14,14 +13,12 @@ function MainAbout() {
   ));
 
   return (
-    <div className={scss.mainAbout}>
+    <div className="container">
+      <div className={scss.mainAbout}>
       <div className={scss.content}>
       <img src={mainAboutImg} className={scss.mainImg} alt="" />
       <aside className={scss.vr}>
-        {/* <div className={scss.div}> */}
           <img src={vr} className={scss.vrImg} alt="video" />
-        {/* </div> */}
-        {/* <img src={play} className={scss.playBtn} alt="playBtn" /> */}
       </aside>
       </div>
       <article className={scss.rightPart}>
@@ -38,6 +35,7 @@ function MainAbout() {
         <main>{texts}</main>
         <span className={scss.btnRead}>Read more</span>
       </article>
+    </div>
     </div>
   );
 }

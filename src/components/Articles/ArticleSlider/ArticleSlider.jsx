@@ -1,6 +1,6 @@
 import React from "react";
 import scss from "../Articles.module.scss";
-import SlickSlider from "react-slick"; // <-- Импортируем react-slick под другим именем
+import SlickSlider from "react-slick"; 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";

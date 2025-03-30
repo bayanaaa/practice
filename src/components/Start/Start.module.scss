@@ -1,7 +1,8 @@
 .start {
   display: flex;
   flex-direction: column;
-  padding: 70px 120px;
+  padding: 70px 0;
+  width: 100%;
   align-items: center;
   span {
     background: linear-gradient(#e95ce9, #0cbaf1);
@@ -30,8 +31,8 @@
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
-    transition: background-size 0.5s ease-in-out; // Анимация для плавного увеличения фона
-    height: 70vh;
+    transition: background-size 0.5s ease-in-out;
+    height: 470px;
     border-radius: 10px;
     width: 96%;
     padding: 50px 25px 25px 25px;
@@ -100,7 +101,7 @@
 
 @media (max-width: 768px) {
   .start {
-    padding: 50px 30px;
+    padding: 50px 0;
     h1 {
       font-size: 31px;
       line-height: 100%;
@@ -138,7 +139,7 @@
       }
     }
     .youtube {
-      height: 26vh;
+      height: 20vh;
     }
   }
 }

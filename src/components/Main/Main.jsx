@@ -2,9 +2,7 @@ import React from "react";
 import scss from "./Main.module.scss";
 import vrImg from "../../assets/Main/vrImg.svg";
 import happyClients from "../../assets/Main/happyClients.svg";
-import play from "../../assets/Main/play.svg";
 import video from "../../assets/Main/video.svg";
-import mainBg from "../../assets/Main/mainBg.svg";
 import { arr } from "../../constants/Main";
 
 function Main() {
@@ -17,7 +15,8 @@ function Main() {
   ));
 
   return (
-    <main className={scss.main}>
+    <div className="container">
+      <main className={scss.main}>
       <section className={scss.upperPart}>
         <div className={scss.firstSection}>
           <article>
@@ -41,8 +40,8 @@ function Main() {
         <img src={vrImg} className={scss.vrImg} alt="VrImg" />
       </section>
       <section className={scss.bottomPart}>{cards}</section>
-      <img src={mainBg} className={scss.mainBg} alt="mainBg" />
     </main>
+    </div>
   );
 }
 

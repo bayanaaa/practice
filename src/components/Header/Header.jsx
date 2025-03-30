@@ -52,7 +52,9 @@ function Header() {
   }, []);
 
   return (
-    <header className={`${scss.header} ${scrolled ? scss.scrolled : ""}`}>
+    <div className={`${scss.content} ${scrolled ? scss.scrolled : ""}`}>
+      <div className="container">
+      <header className={scss.header}>
       <Link to="/">
         <img src={logo} alt="Logo" />
       </Link>
@@ -92,6 +94,8 @@ function Header() {
         </nav>
       )}
     </header>
+    </div>
+    </div>
   );
 }
 

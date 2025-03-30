@@ -7,7 +7,8 @@ function Start() {
   const [click, setClick] = useState(false);
 
   return (
-    <div className={scss.start}>
+    <div className="container">
+      <div className={scss.start}>
       <span>How to get started?</span>
       <h1>Bringing Your Virtual Reality Dreams to Life </h1>
 
@@ -36,6 +37,7 @@ function Start() {
         ></iframe>
       )}
       <button>Get started</button>
+    </div>
     </div>
   );
 }
