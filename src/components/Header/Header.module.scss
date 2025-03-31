@@ -131,7 +131,7 @@ nav,
       position: fixed;
       left: 0;
       top: 0;
-      width: 100%;
+      width: -webkit-fill-available;
       height: 100vh;
       background-color: rgba(37, 37, 50, 0.95);
       z-index: -2;
@@ -185,8 +185,9 @@ nav,
       align-items: start;
 
       .arrowClick {
-        position: unset;
+        position: unset !important;
         width: 100%;
+
         .openLinks {
           font-size: 20px;
         }
